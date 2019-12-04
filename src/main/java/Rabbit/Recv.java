@@ -4,8 +4,10 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
+import model.Person;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
+import utils.MyBatisUtil;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,8 +22,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringReader;
 
+import static JAXBwoker.JaxbWoker.fromXmlToObject;
+
 public class Recv {
-    private static String fileName = "C:\\Users\\rusdbb\\IdeaProjects\\output.xml";
+    private static String outputFileName = "C:\\Users\\rusdbb\\IdeaProjects\\output.xml";
     private final static String QUEUE_NAME = "hello";
     static String message = "";
 
@@ -39,10 +43,23 @@ public class Recv {
             if (message != "") {
                 Document document = stringToDocument(message);
                 try {
-                    docToXml(document, fileName); // записываем xml в файл
+                    docToXml(document, outputFileName); // записываем xml в файл
                 } catch (TransformerException e) {
                     e.printStackTrace();
+
                 }
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Person unmarshPerson = fromXmlToObject(outputFileName);         // восстанавливаем объект из XML файла
+                if (unmarshPerson != null) {
+                    System.out.println(unmarshPerson.toString());
+                }
+
+                MyBatisUtil.getPersonMapper().save(unmarshPerson); //save to output
+
             }
         };
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
@@ -63,9 +80,9 @@ public class Recv {
         return null;
     }
 
-    private static void docToXml(Document document, String fileName) throws IOException, TransformerException {
+    private static void docToXml(Document document, String outputFileName) throws IOException, TransformerException {
         DOMSource source = new DOMSource(document);
-        FileWriter writer = new FileWriter(new File(fileName));
+        FileWriter writer = new FileWriter(new File(outputFileName));
         StreamResult result = new StreamResult(writer);
 
         TransformerFactory transformerFactory = TransformerFactory.newInstance();

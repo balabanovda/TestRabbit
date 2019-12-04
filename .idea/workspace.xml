@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74f92cea-cc58-41e8-930b-cace177d941d" name="Default Changelist" comment="" />
+    <list default="true" id="74f92cea-cc58-41e8-930b-cace177d941d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MainReadAndSend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MainReceiveAndWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rabbit/Recv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rabbit/Recv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/MyBatisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/MyBatisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/MyBatisUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/MyBatisUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/MyBatisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/MyBatisUtil.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +26,10 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,12 +38,13 @@
     </option>
   </component>
   <component name="ProjectId" id="1TspXLdFuLSBGNkTqJK07XBavPS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/calcul_demo-master" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -64,15 +79,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Recv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Rabbit.Recv" />
+    <configuration name="MainReadAndSend" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainReadAndSend" />
       <module name="_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Rabbit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainReceiveAndWrite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainReceiveAndWrite" />
+      <module name="_2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,10 +108,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainReadAndSend" />
+        <item itemvalue="Application.MainReceiveAndWrite" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.JaxbWoker" />
         <item itemvalue="Application.Send" />
-        <item itemvalue="Application.Recv" />
       </list>
     </recent_temporary>
   </component>
@@ -111,5 +128,18 @@
       <updated>1574258695266</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -31,6 +31,12 @@ public class MyBatisUtil {
 
     }
 
+    public static PersonMapper getPersonMapper(){
+        SqlSessionFactory sqlSessionFactory = buildSqlSessionFactory();
+        PersonMapper personMapper = sqlSessionFactory.openSession(true).getMapper(PersonMapper.class);
+        return personMapper;
+    }
+
     public static SqlSessionFactory getSqlSessionFactory() {
         return sqlSessionFactory;
     }
